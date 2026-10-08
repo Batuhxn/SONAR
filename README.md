@@ -43,7 +43,7 @@ interpreter is `.venv/bin/python`; these platforms were not validated in A0.
 # Live active/passive/parametric/negative cases; creates a new evidence file.
 .\.venv\Scripts\python.exe -m sonar_a0 verify --cases examples/a0_cases.json --output live-output/my-run.json
 
-# Check robots accessibility only; this does not establish search/product health.
+# Check robots accessibility only; this does not establish search/product health
 .\.venv\Scripts\python.exe -m sonar_a0 health direnc
 ```
 
