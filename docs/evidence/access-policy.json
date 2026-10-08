@@ -1,0 +1,53 @@
+[
+  {
+    "supplier": "ozdisan",
+    "robots": {
+      "supplier": "ozdisan",
+      "kind": "robots",
+      "requested_url": "https://www.ozdisan.com/robots.txt",
+      "url": "https://www.ozdisan.com/robots.txt",
+      "status": 200,
+      "content_type": "text/plain; charset=UTF-8",
+      "fetched_at": "2026-10-08T16:29:21.483398+00:00",
+      "size": 1309,
+      "sha256": "336871590addbc1597e19d58f1db2eb6f9dbad27d01a4ac4eba283562c9ded68"
+    },
+    "relevant_rules": [
+      "Disallow: /*search=",
+      "Disallow: /api/",
+      "Disallow: /_next/",
+      "Crawl-delay: 1"
+    ],
+    "terms": {
+      "url": "https://www.ozdisan.com/sozlesmeler/uyelik-sozlesmesi",
+      "fetched_at": "2026-10-08T16:33:46.494522+00:00",
+      "sha256": "1913464385a25ff1bc7602cfffe89195184fdb5fb817a05cbb66225561da6982"
+    },
+    "interpretation": "robots access is separate from permission for commercial reuse or redistribution"
+  },
+  {
+    "supplier": "direnc",
+    "robots": {
+      "supplier": "direnc",
+      "kind": "robots",
+      "requested_url": "https://www.direnc.net/robots.txt",
+      "url": "https://www.direnc.net/robots.txt",
+      "status": 200,
+      "content_type": "text/plain",
+      "fetched_at": "2026-10-08T16:29:29.324131+00:00",
+      "size": 2267,
+      "sha256": "5f526f55abc74ac8caac1d3f48688ac79bd083eb569806abc325847422033a5d"
+    },
+    "relevant_rules": [
+      "Disallow: /srv/",
+      "Disallow: /ajax.php",
+      "Allow: /"
+    ],
+    "terms": {
+      "url": "https://www.direnc.net/kullanim-sozlesmesi",
+      "fetched_at": "2026-10-08T16:33:50.166060+00:00",
+      "sha256": "36c02e0e7cab83ffc707d017d04c39249c34d1f831042959fbaffd741b98c15d"
+    },
+    "interpretation": "robots access is separate from permission for commercial reuse or redistribution"
+  }
+]

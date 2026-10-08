@@ -1,0 +1,2314 @@
+{
+  "schema_version": 1,
+  "data_origin": "live_http",
+  "started_at": "2026-10-08T16:44:18.729271+00:00",
+  "scope": "A0 investigation only",
+  "cases": [
+    {
+      "supplier": "ozdisan",
+      "operation": "search",
+      "query": "LM358P",
+      "status": "robots_disallowed",
+      "offers": [],
+      "message": "robots.txt disallows this URL; no request sent",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/robots.txt",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:22.050814+00:00",
+          "http_status": 200,
+          "bytes": 1309,
+          "sha256": "336871590addbc1597e19d58f1db2eb6f9dbad27d01a4ac4eba283562c9ded68"
+        },
+        {
+          "url": "https://www.ozdisan.com/c?search=LM358P",
+          "attempted": false,
+          "checked_at": "2026-10-08T16:44:22.053804+00:00",
+          "status": "robots_disallowed"
+        }
+      ],
+      "case_id": "oz-search-LM358P",
+      "sample_kind": "active",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "search",
+      "query": "NE555P",
+      "status": "robots_disallowed",
+      "offers": [],
+      "message": "robots.txt disallows this URL; no request sent",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/c?search=NE555P",
+          "attempted": false,
+          "checked_at": "2026-10-08T16:44:22.054805+00:00",
+          "status": "robots_disallowed"
+        }
+      ],
+      "case_id": "oz-search-NE555P",
+      "sample_kind": "active",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "search",
+      "query": "LM324N",
+      "status": "robots_disallowed",
+      "offers": [],
+      "message": "robots.txt disallows this URL; no request sent",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/c?search=LM324N",
+          "attempted": false,
+          "checked_at": "2026-10-08T16:44:22.054805+00:00",
+          "status": "robots_disallowed"
+        }
+      ],
+      "case_id": "oz-search-LM324N",
+      "sample_kind": "active",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "search",
+      "query": "1N4148",
+      "status": "robots_disallowed",
+      "offers": [],
+      "message": "robots.txt disallows this URL; no request sent",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/c?search=1N4148",
+          "attempted": false,
+          "checked_at": "2026-10-08T16:44:22.055805+00:00",
+          "status": "robots_disallowed"
+        }
+      ],
+      "case_id": "oz-search-1N4148",
+      "sample_kind": "active",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "search",
+      "query": "RC0603FR-0710KL",
+      "status": "robots_disallowed",
+      "offers": [],
+      "message": "robots.txt disallows this URL; no request sent",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/c?search=RC0603FR-0710KL",
+          "attempted": false,
+          "checked_at": "2026-10-08T16:44:22.056132+00:00",
+          "status": "robots_disallowed"
+        }
+      ],
+      "case_id": "oz-search-RC0603FR-0710KL",
+      "sample_kind": "passive",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "search",
+      "query": "CC0603KRX7R9BB104",
+      "status": "robots_disallowed",
+      "offers": [],
+      "message": "robots.txt disallows this URL; no request sent",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/c?search=CC0603KRX7R9BB104",
+          "attempted": false,
+          "checked_at": "2026-10-08T16:44:22.056132+00:00",
+          "status": "robots_disallowed"
+        }
+      ],
+      "case_id": "oz-search-CC0603KRX7R9BB104",
+      "sample_kind": "passive",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "search",
+      "query": "10K 0603",
+      "status": "robots_disallowed",
+      "offers": [],
+      "message": "robots.txt disallows this URL; no request sent",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/c?search=10K+0603",
+          "attempted": false,
+          "checked_at": "2026-10-08T16:44:22.057096+00:00",
+          "status": "robots_disallowed"
+        }
+      ],
+      "case_id": "oz-search-10K-0603",
+      "sample_kind": "parametric",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "search",
+      "query": "100nF 0603",
+      "status": "robots_disallowed",
+      "offers": [],
+      "message": "robots.txt disallows this URL; no request sent",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/c?search=100nF+0603",
+          "attempted": false,
+          "checked_at": "2026-10-08T16:44:22.057096+00:00",
+          "status": "robots_disallowed"
+        }
+      ],
+      "case_id": "oz-search-100nF-0603",
+      "sample_kind": "parametric",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "search",
+      "query": "SONAR-NONEXISTENT-20261008-A",
+      "status": "robots_disallowed",
+      "offers": [],
+      "message": "robots.txt disallows this URL; no request sent",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/c?search=SONAR-NONEXISTENT-20261008-A",
+          "attempted": false,
+          "checked_at": "2026-10-08T16:44:22.057096+00:00",
+          "status": "robots_disallowed"
+        }
+      ],
+      "case_id": "oz-search-negative-1",
+      "sample_kind": "negative",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "search",
+      "query": "SONAR-NONEXISTENT-20261008-B",
+      "status": "robots_disallowed",
+      "offers": [],
+      "message": "robots.txt disallows this URL; no request sent",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/c?search=SONAR-NONEXISTENT-20261008-B",
+          "attempted": false,
+          "checked_at": "2026-10-08T16:44:22.059110+00:00",
+          "status": "robots_disallowed"
+        }
+      ],
+      "case_id": "oz-search-negative-2",
+      "sample_kind": "negative",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "LM358P",
+      "status": "partial",
+      "offers": [
+        {
+          "supplier": "direnc",
+          "url": "https://www.direnc.net/lm358-single-supply-dual-operational-amplifiers",
+          "fetched_at": "2026-10-08T16:44:28.050810+00:00",
+          "title": "LM358P OpAmp Entegresi DIP-8",
+          "sku": "T2220",
+          "mpn": null,
+          "manufacturer": "STM - Texas",
+          "manufacturer_status": "ambiguous",
+          "candidate_mpn": "LM358P",
+          "match": "unverified_candidate",
+          "package": "DIP8/7.62mm",
+          "packaging": null,
+          "stock_status": "in_stock",
+          "stock_quantity": null,
+          "moq": 1,
+          "order_multiple": 1,
+          "mpq": null,
+          "prices": [
+            {
+              "min_quantity": 1,
+              "unit_price": "4.65",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell-vat] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "3.87",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "4.65",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 9,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 10,
+              "unit_price": "4.51",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 99,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 100,
+              "unit_price": "4.37",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 499,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 500,
+              "unit_price": "4.18",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 2000,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            }
+          ],
+          "field_sources": {
+            "sku": "Product JSON-LD sku",
+            "manufacturer": "Product JSON-LD brand.name",
+            "candidate_mpn": "First observed product-title token (inferred; not a verified manufacturer MPN)",
+            "package": "Visible product specification table: Paket Tipi",
+            "stock_status": "Product JSON-LD offers.availability",
+            "moq": "Visible quantity input min (UI constraint, not a contractual guarantee)",
+            "order_multiple": "Visible quantity input step (UI constraint, not a contractual guarantee)"
+          },
+          "warnings": [
+            "Supplier manufacturer label is ambiguous",
+            "Manufacturer MPN not explicitly provided; title token cannot establish exact MPN identity",
+            "Numeric stock is not disclosed by the parsed public fields",
+            "Shipping packaging unknown; package field describes the component case"
+          ]
+        }
+      ],
+      "message": "https://www.direnc.net/lm358-single-supply-dual-operational-amplifiers: partial ",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/robots.txt",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:25.192865+00:00",
+          "http_status": 200,
+          "bytes": 2267,
+          "sha256": "5f526f55abc74ac8caac1d3f48688ac79bd083eb569806abc325847422033a5d"
+        },
+        {
+          "url": "https://www.direnc.net/arama?q=LM358P",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:26.023719+00:00",
+          "http_status": 200,
+          "bytes": 917607,
+          "sha256": "704a31985886e7eba087834cc8656ef0c9692c053ebb12df74da188e45ec3e3d"
+        },
+        {
+          "url": "https://www.direnc.net/lm358-single-supply-dual-operational-amplifiers",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:28.050810+00:00",
+          "http_status": 200,
+          "bytes": 961224,
+          "sha256": "5fe6737b6582fada856a1ad4722b4b2a1d10919bd35256f085cb1e2219355fec"
+        }
+      ],
+      "case_id": "dir-search-LM358P",
+      "sample_kind": "active",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "NE555P",
+      "status": "not_found",
+      "offers": [],
+      "message": "Supplier explicitly reports no search results",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/arama?q=NE555P",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:30.055611+00:00",
+          "http_status": 200,
+          "bytes": 906702,
+          "sha256": "9e9429f3c1de206a5da0e9e29c559074c6f931e4f127f2f27cdbfcaeb0c73940"
+        }
+      ],
+      "case_id": "dir-search-NE555P",
+      "sample_kind": "active",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "LM324N",
+      "status": "partial",
+      "offers": [
+        {
+          "supplier": "direnc",
+          "url": "https://www.direnc.net/lm324n-5ma-5mv-opamp-entegresi-dip14",
+          "fetched_at": "2026-10-08T16:44:34.477913+00:00",
+          "title": "LM324N 5mA 5mV OpAmp Entegresi DIP14",
+          "sku": "T2228",
+          "mpn": null,
+          "manufacturer": "STM - Texas",
+          "manufacturer_status": "ambiguous",
+          "candidate_mpn": "LM324N",
+          "match": "unverified_candidate",
+          "package": null,
+          "packaging": null,
+          "stock_status": "in_stock",
+          "stock_quantity": null,
+          "moq": 1,
+          "order_multiple": 1,
+          "mpq": null,
+          "prices": [
+            {
+              "min_quantity": 1,
+              "unit_price": "5.81",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell-vat] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "4.84",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "5.81",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 9,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 10,
+              "unit_price": "5.64",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 99,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 100,
+              "unit_price": "5.46",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 499,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 500,
+              "unit_price": "5.23",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 2000,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            }
+          ],
+          "field_sources": {
+            "sku": "Product JSON-LD sku",
+            "manufacturer": "Product JSON-LD brand.name",
+            "candidate_mpn": "First observed product-title token (inferred; not a verified manufacturer MPN)",
+            "stock_status": "Product JSON-LD offers.availability",
+            "moq": "Visible quantity input min (UI constraint, not a contractual guarantee)",
+            "order_multiple": "Visible quantity input step (UI constraint, not a contractual guarantee)"
+          },
+          "warnings": [
+            "Supplier manufacturer label is ambiguous",
+            "Manufacturer MPN not explicitly provided; title token cannot establish exact MPN identity",
+            "Numeric stock is not disclosed by the parsed public fields",
+            "Shipping packaging unknown; package field describes the component case"
+          ]
+        },
+        {
+          "supplier": "direnc",
+          "url": "https://www.direnc.net/lm324n-dip-14-op-amp-entegresi",
+          "fetched_at": "2026-10-08T16:44:35.956566+00:00",
+          "title": "LM324N DIP-14 Op-Amp Entegresi",
+          "sku": "T15629",
+          "mpn": null,
+          "manufacturer": "Texas",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": "LM324N",
+          "match": "unverified_candidate",
+          "package": "DIP14",
+          "packaging": null,
+          "stock_status": "in_stock",
+          "stock_quantity": null,
+          "moq": 1,
+          "order_multiple": 1,
+          "mpq": null,
+          "prices": [
+            {
+              "min_quantity": 1,
+              "unit_price": "15.17",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell-vat] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "12.64",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "15.17",
+              "currency": "TRY",
+              "vat": "excluded",
+              "max_quantity": 9,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 10,
+              "unit_price": "14.41",
+              "currency": "TRY",
+              "vat": "excluded",
+              "max_quantity": 24,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 25,
+              "unit_price": "13.65",
+              "currency": "TRY",
+              "vat": "excluded",
+              "max_quantity": 99,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 100,
+              "unit_price": "12.89",
+              "currency": "TRY",
+              "vat": "excluded",
+              "max_quantity": 500,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            }
+          ],
+          "field_sources": {
+            "sku": "Product JSON-LD sku",
+            "manufacturer": "Product JSON-LD brand.name",
+            "candidate_mpn": "First observed product-title token (inferred; not a verified manufacturer MPN)",
+            "package": "Visible product specification table: K\u0131l\u0131f / Kasa",
+            "stock_status": "Product JSON-LD offers.availability",
+            "moq": "Visible quantity input min (UI constraint, not a contractual guarantee)",
+            "order_multiple": "Visible quantity input step (UI constraint, not a contractual guarantee)"
+          },
+          "warnings": [
+            "Manufacturer MPN not explicitly provided; title token cannot establish exact MPN identity",
+            "Numeric stock is not disclosed by the parsed public fields",
+            "Shipping packaging unknown; package field describes the component case"
+          ]
+        }
+      ],
+      "message": "https://www.direnc.net/lm324n-5ma-5mv-opamp-entegresi-dip14: partial ; https://www.direnc.net/lm324n-dip-14-op-amp-entegresi: partial ",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/arama?q=LM324N",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:32.345396+00:00",
+          "http_status": 200,
+          "bytes": 923964,
+          "sha256": "e61e444989dff68cc0d71ab77475b65c20c8e2297756daff1f3ef059f4edf18e"
+        },
+        {
+          "url": "https://www.direnc.net/lm324n-5ma-5mv-opamp-entegresi-dip14",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:34.477913+00:00",
+          "http_status": 200,
+          "bytes": 960126,
+          "sha256": "6204a54a9f7d8c8c6c9943aeea01e397ee70ce5bf3c0012e85ecd2a47d8f7992"
+        },
+        {
+          "url": "https://www.direnc.net/lm324n-dip-14-op-amp-entegresi",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:35.956566+00:00",
+          "http_status": 200,
+          "bytes": 961001,
+          "sha256": "c36196cd82a78b402a32a13fe04d63103a732a3f1dc486aaef9b0da03cfa47d8"
+        }
+      ],
+      "case_id": "dir-search-LM324N",
+      "sample_kind": "active",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "1N4148",
+      "status": "partial",
+      "offers": [
+        {
+          "supplier": "direnc",
+          "url": "https://www.direnc.net/1n4148-smd-diyot-mic",
+          "fetched_at": "2026-10-08T16:44:39.975319+00:00",
+          "title": "1N4148 SMD Diyot - MIC",
+          "sku": "T1258",
+          "mpn": null,
+          "manufacturer": "MIC",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": "1N4148",
+          "match": "unverified_candidate",
+          "package": null,
+          "packaging": null,
+          "stock_status": "in_stock",
+          "stock_quantity": null,
+          "moq": 10,
+          "order_multiple": 1,
+          "mpq": null,
+          "prices": [
+            {
+              "min_quantity": 10,
+              "unit_price": "0.46",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell-vat] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 10,
+              "unit_price": "0.39",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "0.46",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 99,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 100,
+              "unit_price": "0.44",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 999,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 1000,
+              "unit_price": "0.42",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 9999,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 10000,
+              "unit_price": "0.40",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 100000,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            }
+          ],
+          "field_sources": {
+            "sku": "Product JSON-LD sku",
+            "manufacturer": "Product JSON-LD brand.name",
+            "candidate_mpn": "First observed product-title token (inferred; not a verified manufacturer MPN)",
+            "stock_status": "Product JSON-LD offers.availability",
+            "moq": "Visible quantity input min (UI constraint, not a contractual guarantee)",
+            "order_multiple": "Visible quantity input step (UI constraint, not a contractual guarantee)"
+          },
+          "warnings": [
+            "Manufacturer MPN not explicitly provided; title token cannot establish exact MPN identity",
+            "Numeric stock is not disclosed by the parsed public fields",
+            "Shipping packaging unknown; package field describes the component case"
+          ]
+        },
+        {
+          "supplier": "direnc",
+          "url": "https://www.direnc.net/1n4148w-ht-smd-hottech-diyot",
+          "fetched_at": "2026-10-08T16:44:42.957852+00:00",
+          "title": "1N4148W-HT SMD Diyot - Hottech",
+          "sku": "T1253",
+          "mpn": null,
+          "manufacturer": "Hottech",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": "1N4148W-HT",
+          "match": "unknown",
+          "package": null,
+          "packaging": null,
+          "stock_status": "out_of_stock",
+          "stock_quantity": null,
+          "moq": 10,
+          "order_multiple": 1,
+          "mpq": null,
+          "prices": [
+            {
+              "min_quantity": 10,
+              "unit_price": "0.60",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell-vat] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 10,
+              "unit_price": "0.50",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "0.60",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 99,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 100,
+              "unit_price": "0.54",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 999,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 1000,
+              "unit_price": "0.48",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 9999,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 10000,
+              "unit_price": "0.42",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 100000,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            }
+          ],
+          "field_sources": {
+            "sku": "Product JSON-LD sku",
+            "manufacturer": "Product JSON-LD brand.name",
+            "candidate_mpn": "First observed product-title token (inferred; not a verified manufacturer MPN)",
+            "stock_status": "Product JSON-LD offers.availability",
+            "moq": "Visible quantity input min (UI constraint, not a contractual guarantee)",
+            "order_multiple": "Visible quantity input step (UI constraint, not a contractual guarantee)"
+          },
+          "warnings": [
+            "Manufacturer MPN not explicitly provided; title token cannot establish exact MPN identity",
+            "Numeric stock is not disclosed by the parsed public fields",
+            "Shipping packaging unknown; package field describes the component case"
+          ]
+        }
+      ],
+      "message": "https://www.direnc.net/1n4148-smd-diyot-mic: partial ; https://www.direnc.net/1n4148w-ht-smd-hottech-diyot: partial ",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/arama?q=1N4148",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:38.080509+00:00",
+          "http_status": 200,
+          "bytes": 950843,
+          "sha256": "c8dc8ce99f92aa7d65f598c33e433d3f0592bf29804c0b42b2ca53268d3d46cf"
+        },
+        {
+          "url": "https://www.direnc.net/1n4148-smd-diyot-mic",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:39.975319+00:00",
+          "http_status": 200,
+          "bytes": 955776,
+          "sha256": "c03213f988b3b28a9277db5a0111570e140d152996131c0b620ebd156b1610eb"
+        },
+        {
+          "url": "https://www.direnc.net/1n4148w-ht-smd-hottech-diyot",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:42.957852+00:00",
+          "http_status": 200,
+          "bytes": 956201,
+          "sha256": "2656e18ecb9bbdffc4ecc744a4d834ed76a8cb49cbb3d5f28543c047d2841dd8"
+        }
+      ],
+      "case_id": "dir-search-1N4148",
+      "sample_kind": "active",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "RC0603FR-0710KL",
+      "status": "not_found",
+      "offers": [],
+      "message": "Supplier explicitly reports no search results",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/arama?q=RC0603FR-0710KL",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:44.025770+00:00",
+          "http_status": 200,
+          "bytes": 906765,
+          "sha256": "8cffccb4a9f27fb8acee245aac5a394dc67366bf5ecaef7566f2dd5a812f7019"
+        }
+      ],
+      "case_id": "dir-search-RC0603FR-0710KL",
+      "sample_kind": "passive",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "CC0603KRX7R9BB104",
+      "status": "not_found",
+      "offers": [],
+      "message": "Supplier explicitly reports no search results",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/arama?q=CC0603KRX7R9BB104",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:46.096791+00:00",
+          "http_status": 200,
+          "bytes": 906779,
+          "sha256": "4bcf7cc28e43afad20143cd71e399dc96ad86f0a93cd2c96844eeeda21c1d38c"
+        }
+      ],
+      "case_id": "dir-search-CC0603KRX7R9BB104",
+      "sample_kind": "passive",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "10K 0603",
+      "status": "not_found",
+      "offers": [],
+      "message": "Supplier explicitly reports no search results",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/arama?q=10K+0603",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:51.274671+00:00",
+          "http_status": 200,
+          "bytes": 906716,
+          "sha256": "81078912f7d80c4c43197cb69b918e9c00f21b8bf00c2b72f505e650b6fb4d1f"
+        }
+      ],
+      "case_id": "dir-search-10K-0603",
+      "sample_kind": "parametric",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "100nF 0603",
+      "status": "not_found",
+      "offers": [],
+      "message": "Supplier explicitly reports no search results",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/arama?q=100nF+0603",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:52.280171+00:00",
+          "http_status": 200,
+          "bytes": 906730,
+          "sha256": "e5c94afc7ce94e6d5436b84f52552eb9d141d255319c2e44fe0dd564d5176a19"
+        }
+      ],
+      "case_id": "dir-search-100nF-0603",
+      "sample_kind": "parametric",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "SONAR-NONEXISTENT-20261008-A",
+      "status": "not_found",
+      "offers": [],
+      "message": "Supplier explicitly reports no search results",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/arama?q=SONAR-NONEXISTENT-20261008-A",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:54.375271+00:00",
+          "http_status": 200,
+          "bytes": 906856,
+          "sha256": "ce6e6b8651215ffe5f333239f1dce76be3ade8dc09bd286f60e68d122cc7e761"
+        }
+      ],
+      "case_id": "dir-search-negative-1",
+      "sample_kind": "negative",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "SONAR-NONEXISTENT-20261008-B",
+      "status": "not_found",
+      "offers": [],
+      "message": "Supplier explicitly reports no search results",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/arama?q=SONAR-NONEXISTENT-20261008-B",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:44:56.387584+00:00",
+          "http_status": 200,
+          "bytes": 906856,
+          "sha256": "e1b84089782297a3a2060b05ec9b72685f42cff9949b31525c0127d9eb40632d"
+        }
+      ],
+      "case_id": "dir-search-negative-2",
+      "sample_kind": "negative",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "product",
+      "query": "LM358P",
+      "status": "partial",
+      "offers": [
+        {
+          "supplier": "ozdisan",
+          "url": "https://www.ozdisan.com/p/amplifikatorler-242/texas-lm358p-13549",
+          "fetched_at": "2026-10-08T16:45:00.251689+00:00",
+          "title": "LM358P",
+          "sku": "LM358P",
+          "mpn": "LM358P",
+          "manufacturer": "TEXAS",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": null,
+          "match": "exact_mpn",
+          "package": "DIP8",
+          "packaging": "TUBE",
+          "stock_status": "in_stock",
+          "stock_quantity": 18063,
+          "moq": 1,
+          "order_multiple": 1,
+          "mpq": 50,
+          "prices": [
+            {
+              "min_quantity": 1,
+              "unit_price": "5.72084",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "0.11611",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 25,
+              "unit_price": "5.29707",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 25,
+              "unit_price": "0.10751",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 50,
+              "unit_price": "4.8733",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 50,
+              "unit_price": "0.09891",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 250,
+              "unit_price": "4.86863",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 250,
+              "unit_price": "0.09881",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            }
+          ],
+          "field_sources": {
+            "mpn": "Product JSON-LD: mpn",
+            "sku": "Product JSON-LD: sku",
+            "manufacturer": "Product JSON-LD: brand.name",
+            "package": "Product JSON-LD additionalProperty",
+            "packaging": "pageProps.data.variantPackageType",
+            "moq": "pageProps.data.availability.minimumOrderQuantity",
+            "order_multiple": "pageProps.data.availability.orderQuantityMultiplier",
+            "mpq": "pageProps.data.availability.mpq",
+            "stock_quantity": "pageProps.data.availability.totalStock"
+          },
+          "warnings": [
+            "Unit-price VAT basis unverified; do not compare to VAT-inclusive prices"
+          ]
+        }
+      ],
+      "message": "",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/p/amplifikatorler-242/texas-lm358p-13549",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:00.251689+00:00",
+          "http_status": 200,
+          "bytes": 258482,
+          "sha256": "05c285b16c3858a530a4a621946f71d79f9c1fff858abe8fdf810b85c554973d"
+        }
+      ],
+      "case_id": "oz-product-LM358P",
+      "sample_kind": "active",
+      "seed_url_origin": "Public product URL independently located during research; not discovered by the adapter search"
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "product",
+      "query": "NE555P",
+      "status": "partial",
+      "offers": [
+        {
+          "supplier": "ozdisan",
+          "url": "https://www.ozdisan.com/p/programlanabilir-zamanlayici-ve-osilator-entegreleri-211/texas-ne555p-14278",
+          "fetched_at": "2026-10-08T16:45:00.793524+00:00",
+          "title": "NE555P",
+          "sku": "NE555P",
+          "mpn": "NE555P",
+          "manufacturer": "TEXAS",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": null,
+          "match": "exact_mpn",
+          "package": "DIP8",
+          "packaging": "BOX",
+          "stock_status": "in_stock",
+          "stock_quantity": 2779,
+          "moq": 1,
+          "order_multiple": 1,
+          "mpq": 50,
+          "prices": [
+            {
+              "min_quantity": 1,
+              "unit_price": "12.52",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "BOX",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "0.2541",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "BOX",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 25,
+              "unit_price": "11.5926",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "BOX",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 25,
+              "unit_price": "0.23528",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "BOX",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 50,
+              "unit_price": "10.6652",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "BOX",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 50,
+              "unit_price": "0.21646",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "BOX",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 250,
+              "unit_price": "10.6549",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "BOX",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 250,
+              "unit_price": "0.21625",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "BOX",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            }
+          ],
+          "field_sources": {
+            "mpn": "Product JSON-LD: mpn",
+            "sku": "Product JSON-LD: sku",
+            "manufacturer": "Product JSON-LD: brand.name",
+            "package": "Product JSON-LD additionalProperty",
+            "packaging": "pageProps.data.variantPackageType",
+            "moq": "pageProps.data.availability.minimumOrderQuantity",
+            "order_multiple": "pageProps.data.availability.orderQuantityMultiplier",
+            "mpq": "pageProps.data.availability.mpq",
+            "stock_quantity": "pageProps.data.availability.totalStock"
+          },
+          "warnings": [
+            "Unit-price VAT basis unverified; do not compare to VAT-inclusive prices"
+          ]
+        }
+      ],
+      "message": "",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/p/programlanabilir-zamanlayici-ve-osilator-entegreleri-211/texas-ne555p-14278",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:00.793524+00:00",
+          "http_status": 200,
+          "bytes": 257752,
+          "sha256": "48b8298dbe6b0fa03eff9d6a6e4643e333cc27a72b151d493e3cad82e6d0fa9a"
+        }
+      ],
+      "case_id": "oz-product-NE555P",
+      "sample_kind": "active",
+      "seed_url_origin": "Public product URL independently located during research; not discovered by the adapter search"
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "product",
+      "query": "RC0603FR-0710KL",
+      "status": "partial",
+      "offers": [
+        {
+          "supplier": "ozdisan",
+          "url": "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/yageo-rc0603fr-0710kl-379294",
+          "fetched_at": "2026-10-08T16:45:04.912902+00:00",
+          "title": "RC0603FR-0710KL",
+          "sku": "RC0603FR-0710KL",
+          "mpn": "RC0603FR-0710KL",
+          "manufacturer": "YAGEO",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": null,
+          "match": "exact_mpn",
+          "package": "0603 (1608 Metric)",
+          "packaging": "TAPE&REEL",
+          "stock_status": "in_stock",
+          "stock_quantity": 11150,
+          "moq": 50,
+          "order_multiple": 50,
+          "mpq": 5000,
+          "prices": [
+            {
+              "min_quantity": 50,
+              "unit_price": "0.12439",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 50,
+              "unit_price": "0.00252",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 100,
+              "unit_price": "0.11685",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 100,
+              "unit_price": "0.00237",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 500,
+              "unit_price": "0.10931",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 500,
+              "unit_price": "0.00222",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 1000,
+              "unit_price": "0.10177",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 1000,
+              "unit_price": "0.00207",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 2000,
+              "unit_price": "0.09423",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 2000,
+              "unit_price": "0.00191",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 5000,
+              "unit_price": "0.08669",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Tape & Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 5000,
+              "unit_price": "0.00176",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Tape & Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 25000,
+              "unit_price": "0.08323",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Tape & Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 25000,
+              "unit_price": "0.00169",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Tape & Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            }
+          ],
+          "field_sources": {
+            "mpn": "Product JSON-LD: mpn",
+            "sku": "Product JSON-LD: sku",
+            "manufacturer": "Product JSON-LD: brand.name",
+            "package": "Product JSON-LD additionalProperty",
+            "packaging": "pageProps.data.variantPackageType",
+            "moq": "pageProps.data.availability.minimumOrderQuantity",
+            "order_multiple": "pageProps.data.availability.orderQuantityMultiplier",
+            "mpq": "pageProps.data.availability.mpq",
+            "stock_quantity": "pageProps.data.availability.totalStock"
+          },
+          "warnings": [
+            "Unit-price VAT basis unverified; do not compare to VAT-inclusive prices"
+          ]
+        }
+      ],
+      "message": "",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/p/SMT---SMD-and-Chip-Resistors-194/yageo-rc0603fr-0710kl-379294",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:02.438829+00:00",
+          "http_status": 308,
+          "bytes": 60,
+          "sha256": "6352fc81805171288cb371f3d9f11be89bb080fe7cb2b7a79d59c3918ffbf3ad"
+        },
+        {
+          "url": "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/yageo-rc0603fr-0710kl-379294",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:04.912902+00:00",
+          "http_status": 200,
+          "bytes": 266979,
+          "sha256": "1538f6e83292875e9fc770303a2f4dcd61caca7faa330b12481ee54227114abb"
+        }
+      ],
+      "case_id": "oz-product-RC0603FR-0710KL",
+      "sample_kind": "passive",
+      "seed_url_origin": "Observed product link in supplier homepage; not an automated search result"
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "product",
+      "query": "CC0603KRX7R9BB104",
+      "status": "partial",
+      "offers": [
+        {
+          "supplier": "ozdisan",
+          "url": "https://www.ozdisan.com/p/smt-smd-ve-mlcc-kapasitorler-184/yageo-cc0603krx7r9bb104-476015",
+          "fetched_at": "2026-10-08T16:45:09.957678+00:00",
+          "title": "CC0603KRX7R9BB104",
+          "sku": "CC0603KRX7R9BB104",
+          "mpn": "CC0603KRX7R9BB104",
+          "manufacturer": "YAGEO",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": null,
+          "match": "exact_mpn",
+          "package": "0603 (1608 Metric)",
+          "packaging": "TAPE&REEL",
+          "stock_status": "out_of_stock",
+          "stock_quantity": 0,
+          "moq": 10,
+          "order_multiple": 10,
+          "mpq": 4000,
+          "prices": [
+            {
+              "min_quantity": 10,
+              "unit_price": "0.85619",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 10,
+              "unit_price": "0.01738",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 100,
+              "unit_price": "0.8043",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 100,
+              "unit_price": "0.01632",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 500,
+              "unit_price": "0.75241",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 500,
+              "unit_price": "0.01527",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 1000,
+              "unit_price": "0.70052",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 1000,
+              "unit_price": "0.01422",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 2000,
+              "unit_price": "0.64863",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 2000,
+              "unit_price": "0.01316",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Cut Tape & \u00d6zdisan Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 4000,
+              "unit_price": "0.59674",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Tape & Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 4000,
+              "unit_price": "0.01211",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Tape & Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 20000,
+              "unit_price": "0.57287",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Tape & Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 20000,
+              "unit_price": "0.01163",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "Tape & Reel",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            }
+          ],
+          "field_sources": {
+            "mpn": "Product JSON-LD: mpn",
+            "sku": "Product JSON-LD: sku",
+            "manufacturer": "Product JSON-LD: brand.name",
+            "package": "Product JSON-LD additionalProperty",
+            "packaging": "pageProps.data.variantPackageType",
+            "moq": "pageProps.data.availability.minimumOrderQuantity",
+            "order_multiple": "pageProps.data.availability.orderQuantityMultiplier",
+            "mpq": "pageProps.data.availability.mpq",
+            "stock_quantity": "pageProps.data.availability.totalStock"
+          },
+          "warnings": [
+            "Unit-price VAT basis unverified; do not compare to VAT-inclusive prices"
+          ]
+        }
+      ],
+      "message": "",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/p/SMT---SMD-and-MLCC-Capacitors-184/yageo-cc0603krx7r9bb104-476015",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:06.609168+00:00",
+          "http_status": 308,
+          "bytes": 66,
+          "sha256": "5ed0e9888357dcb52a6a3f830933b2903f6354a010da153ba437824ba0af3d44"
+        },
+        {
+          "url": "https://www.ozdisan.com/p/smt-smd-ve-mlcc-kapasitorler-184/yageo-cc0603krx7r9bb104-476015",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:09.957678+00:00",
+          "http_status": 200,
+          "bytes": 258439,
+          "sha256": "517a19efb52928a26558168e3484f9f5cbbacadceea33093ad55292b7b8668b9"
+        }
+      ],
+      "case_id": "oz-product-CC0603KRX7R9BB104",
+      "sample_kind": "passive",
+      "seed_url_origin": "Observed product link in supplier homepage; not an automated search result"
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "10K",
+      "status": "partial",
+      "offers": [
+        {
+          "supplier": "direnc",
+          "url": "https://www.direnc.net/10kg-yuk-hucresi-hx711-modul-agirlik-takimi",
+          "fetched_at": "2026-10-08T16:45:15.440551+00:00",
+          "title": "10kg Y\u00fck H\u00fccresi + Hx711 Mod\u00fcl A\u011f\u0131rl\u0131k Tak\u0131m\u0131",
+          "sku": "T11593",
+          "mpn": null,
+          "manufacturer": "Samiore Robot",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": "10kg",
+          "match": "unknown",
+          "package": null,
+          "packaging": null,
+          "stock_status": "out_of_stock",
+          "stock_quantity": null,
+          "moq": 1,
+          "order_multiple": 1,
+          "mpq": null,
+          "prices": [
+            {
+              "min_quantity": 1,
+              "unit_price": "101.71",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell-vat] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "84.75",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell] and adjacent VAT label; JSON-LD currency"
+            }
+          ],
+          "field_sources": {
+            "sku": "Product JSON-LD sku",
+            "manufacturer": "Product JSON-LD brand.name",
+            "candidate_mpn": "First observed product-title token (inferred; not a verified manufacturer MPN)",
+            "stock_status": "Product JSON-LD offers.availability",
+            "moq": "Visible quantity input min (UI constraint, not a contractual guarantee)",
+            "order_multiple": "Visible quantity input step (UI constraint, not a contractual guarantee)"
+          },
+          "warnings": [
+            "Manufacturer MPN not explicitly provided; title token cannot establish exact MPN identity",
+            "Numeric stock is not disclosed by the parsed public fields",
+            "Shipping packaging unknown; package field describes the component case"
+          ]
+        },
+        {
+          "supplier": "direnc",
+          "url": "https://www.direnc.net/dijital-yuk-hucresi-agirlik-sensoru-10kg-hx711",
+          "fetched_at": "2026-10-08T16:45:17.486606+00:00",
+          "title": "Dijital Y\u00fck H\u00fccresi A\u011f\u0131rl\u0131k Sens\u00f6r\u00fc 10kg HX711",
+          "sku": "T20698",
+          "mpn": null,
+          "manufacturer": "DirencNet",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": null,
+          "match": "unknown",
+          "package": null,
+          "packaging": null,
+          "stock_status": "out_of_stock",
+          "stock_quantity": null,
+          "moq": 1,
+          "order_multiple": 1,
+          "mpq": null,
+          "prices": [
+            {
+              "min_quantity": 1,
+              "unit_price": "159.82",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell-vat] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "133.19",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell] and adjacent VAT label; JSON-LD currency"
+            }
+          ],
+          "field_sources": {
+            "sku": "Product JSON-LD sku",
+            "manufacturer": "Product JSON-LD brand.name",
+            "stock_status": "Product JSON-LD offers.availability",
+            "moq": "Visible quantity input min (UI constraint, not a contractual guarantee)",
+            "order_multiple": "Visible quantity input step (UI constraint, not a contractual guarantee)"
+          },
+          "warnings": [
+            "Manufacturer MPN not explicitly provided; title token cannot establish exact MPN identity",
+            "Numeric stock is not disclosed by the parsed public fields",
+            "Shipping packaging unknown; package field describes the component case"
+          ]
+        }
+      ],
+      "message": "https://www.direnc.net/10kg-yuk-hucresi-hx711-modul-agirlik-takimi: partial ; https://www.direnc.net/dijital-yuk-hucresi-agirlik-sensoru-10kg-hx711: partial ",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/arama?q=10K",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:14.119530+00:00",
+          "http_status": 200,
+          "bytes": 1126095,
+          "sha256": "63962c5e12f320d86e903be62ef35771f6b0a83f5503264e8defdc590a5e6757"
+        },
+        {
+          "url": "https://www.direnc.net/10kg-yuk-hucresi-hx711-modul-agirlik-takimi",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:15.440551+00:00",
+          "http_status": 200,
+          "bytes": 956621,
+          "sha256": "327d6868f04f98eb4cb73eca00d4519cbdbe3517a1ee1711afb794eb96bc2aeb"
+        },
+        {
+          "url": "https://www.direnc.net/dijital-yuk-hucresi-agirlik-sensoru-10kg-hx711",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:17.486606+00:00",
+          "http_status": 200,
+          "bytes": 960695,
+          "sha256": "5f8ea422f423bf6bf71dce50b2f5720917f2e674e8a8deacf7efdd93e22a5bda"
+        }
+      ],
+      "case_id": "dir-search-10K",
+      "sample_kind": "parametric-passive",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "direnc",
+      "operation": "search",
+      "query": "100nF",
+      "status": "partial",
+      "offers": [
+        {
+          "supplier": "direnc",
+          "url": "https://www.direnc.net/100nf-63v-25mm-multilayer",
+          "fetched_at": "2026-10-08T16:45:21.102415+00:00",
+          "title": "100nF 50V 2.5mm Multilayer Kondansat\u00f6r",
+          "sku": "T3811",
+          "mpn": null,
+          "manufacturer": "Sonsen",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": "100nF",
+          "match": "unverified_candidate",
+          "package": null,
+          "packaging": null,
+          "stock_status": "in_stock",
+          "stock_quantity": null,
+          "moq": 1,
+          "order_multiple": 1,
+          "mpq": null,
+          "prices": [
+            {
+              "min_quantity": 1,
+              "unit_price": "2.03",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell-vat] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "1.70",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell] and adjacent VAT label; JSON-LD currency"
+            }
+          ],
+          "field_sources": {
+            "sku": "Product JSON-LD sku",
+            "manufacturer": "Product JSON-LD brand.name",
+            "candidate_mpn": "First observed product-title token (inferred; not a verified manufacturer MPN)",
+            "stock_status": "Product JSON-LD offers.availability",
+            "moq": "Visible quantity input min (UI constraint, not a contractual guarantee)",
+            "order_multiple": "Visible quantity input step (UI constraint, not a contractual guarantee)"
+          },
+          "warnings": [
+            "Manufacturer MPN not explicitly provided; title token cannot establish exact MPN identity",
+            "Numeric stock is not disclosed by the parsed public fields",
+            "Shipping packaging unknown; package field describes the component case"
+          ]
+        },
+        {
+          "supplier": "direnc",
+          "url": "https://www.direnc.net/100nf-63v-seramik",
+          "fetched_at": "2026-10-08T16:45:23.634391+00:00",
+          "title": "100NF 100V Seramik Kondansat\u00f6r",
+          "sku": "T3839",
+          "mpn": null,
+          "manufacturer": "Weidy",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": "100NF",
+          "match": "unverified_candidate",
+          "package": null,
+          "packaging": null,
+          "stock_status": "in_stock",
+          "stock_quantity": null,
+          "moq": 10,
+          "order_multiple": 1,
+          "mpq": null,
+          "prices": [
+            {
+              "min_quantity": 10,
+              "unit_price": "1.05",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell-vat] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 10,
+              "unit_price": "0.87",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": null,
+              "source": "Visible [data-toggle=price-sell] and adjacent VAT label; JSON-LD currency"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "1.05",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 99,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 100,
+              "unit_price": "0.99",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 499,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 500,
+              "unit_price": "0.94",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 999,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            },
+            {
+              "min_quantity": 1000,
+              "unit_price": "0.84",
+              "currency": "TRY",
+              "vat": "included",
+              "max_quantity": 10000,
+              "packaging": null,
+              "source": "Visible quantity table data-min/data-max/data-vat and price-multiple"
+            }
+          ],
+          "field_sources": {
+            "sku": "Product JSON-LD sku",
+            "manufacturer": "Product JSON-LD brand.name",
+            "candidate_mpn": "First observed product-title token (inferred; not a verified manufacturer MPN)",
+            "stock_status": "Product JSON-LD offers.availability",
+            "moq": "Visible quantity input min (UI constraint, not a contractual guarantee)",
+            "order_multiple": "Visible quantity input step (UI constraint, not a contractual guarantee)"
+          },
+          "warnings": [
+            "Manufacturer MPN not explicitly provided; title token cannot establish exact MPN identity",
+            "Numeric stock is not disclosed by the parsed public fields",
+            "Shipping packaging unknown; package field describes the component case"
+          ]
+        }
+      ],
+      "message": "https://www.direnc.net/100nf-63v-25mm-multilayer: partial ; https://www.direnc.net/100nf-63v-seramik: partial ",
+      "evidence": [
+        {
+          "url": "https://www.direnc.net/arama?q=100nF",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:19.270250+00:00",
+          "http_status": 200,
+          "bytes": 1090617,
+          "sha256": "47b170a7f6832fae05d02340d61202094de701e42c9b45741dda94e3b4ccf253"
+        },
+        {
+          "url": "https://www.direnc.net/100nf-63v-25mm-multilayer",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:21.102415+00:00",
+          "http_status": 200,
+          "bytes": 952649,
+          "sha256": "ef64943ed797463d87b63b6c62cdc04a670e94fee2f39f77064fb4c88a8ce658"
+        },
+        {
+          "url": "https://www.direnc.net/100nf-63v-seramik",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:23.634391+00:00",
+          "http_status": 200,
+          "bytes": 956335,
+          "sha256": "c8f97d25883392bbf852d3ecdafea3ead1aebb2a594a609349136cbaf1e5c166"
+        }
+      ],
+      "case_id": "dir-search-100nF",
+      "sample_kind": "parametric-passive",
+      "seed_url_origin": null
+    },
+    {
+      "supplier": "ozdisan",
+      "operation": "product",
+      "query": "LM324N",
+      "status": "partial",
+      "offers": [
+        {
+          "supplier": "ozdisan",
+          "url": "https://www.ozdisan.com/p/amplifikatorler-242/texas-lm324n-ti-27237",
+          "fetched_at": "2026-10-08T16:45:27.294817+00:00",
+          "title": "LM324N-TI",
+          "sku": "LM324N-TI",
+          "mpn": "LM324N-TI",
+          "manufacturer": "TEXAS",
+          "manufacturer_status": "supplier_reported",
+          "candidate_mpn": null,
+          "match": "partial",
+          "package": "DIP14",
+          "packaging": "TUBE",
+          "stock_status": "in_stock",
+          "stock_quantity": 1375,
+          "moq": 1,
+          "order_multiple": 1,
+          "mpq": 25,
+          "prices": [
+            {
+              "min_quantity": 1,
+              "unit_price": "10.1318",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 1,
+              "unit_price": "0.20563",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 10,
+              "unit_price": "9.38127",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 10,
+              "unit_price": "0.1904",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 25,
+              "unit_price": "8.63077",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 25,
+              "unit_price": "0.17517",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 125,
+              "unit_price": "8.6225",
+              "currency": "TRY",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            },
+            {
+              "min_quantity": 125,
+              "unit_price": "0.175",
+              "currency": "USD",
+              "vat": "unknown",
+              "max_quantity": null,
+              "packaging": "TUBE",
+              "source": "pageProps.initialPrice.response.data.packages[].priceBreaks[].prices[].price"
+            }
+          ],
+          "field_sources": {
+            "mpn": "Product JSON-LD: mpn",
+            "sku": "Product JSON-LD: sku",
+            "manufacturer": "Product JSON-LD: brand.name",
+            "package": "Product JSON-LD additionalProperty",
+            "packaging": "pageProps.data.variantPackageType",
+            "moq": "pageProps.data.availability.minimumOrderQuantity",
+            "order_multiple": "pageProps.data.availability.orderQuantityMultiplier",
+            "mpq": "pageProps.data.availability.mpq",
+            "stock_quantity": "pageProps.data.availability.totalStock"
+          },
+          "warnings": [
+            "Unit-price VAT basis unverified; do not compare to VAT-inclusive prices"
+          ]
+        }
+      ],
+      "message": "",
+      "evidence": [
+        {
+          "url": "https://www.ozdisan.com/p/amplifikatorler-242/texas-lm324n-ti-27237",
+          "attempted": true,
+          "fetched_at": "2026-10-08T16:45:27.294817+00:00",
+          "http_status": 200,
+          "bytes": 257570,
+          "sha256": "1a01a4af4629d6f2d4db785e48d2395224462d66ec549997dc284a9c7c1b2c77"
+        }
+      ],
+      "case_id": "oz-product-LM324N-TI-vs-LM324N",
+      "sample_kind": "suffix-negative",
+      "seed_url_origin": "Observed public product URL in independent research; intentionally compares different full MPNs"
+    }
+  ],
+  "finished_at": "2026-10-08T16:45:27.320831+00:00",
+  "status_counts": {
+    "robots_disallowed": 10,
+    "partial": 10,
+    "not_found": 7
+  },
+  "request_evidence": {
+    "ozdisan": [
+      {
+        "url": "https://www.ozdisan.com/robots.txt",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:22.050814+00:00",
+        "http_status": 200,
+        "bytes": 1309,
+        "sha256": "336871590addbc1597e19d58f1db2eb6f9dbad27d01a4ac4eba283562c9ded68"
+      },
+      {
+        "url": "https://www.ozdisan.com/c?search=LM358P",
+        "attempted": false,
+        "checked_at": "2026-10-08T16:44:22.053804+00:00",
+        "status": "robots_disallowed"
+      },
+      {
+        "url": "https://www.ozdisan.com/c?search=NE555P",
+        "attempted": false,
+        "checked_at": "2026-10-08T16:44:22.054805+00:00",
+        "status": "robots_disallowed"
+      },
+      {
+        "url": "https://www.ozdisan.com/c?search=LM324N",
+        "attempted": false,
+        "checked_at": "2026-10-08T16:44:22.054805+00:00",
+        "status": "robots_disallowed"
+      },
+      {
+        "url": "https://www.ozdisan.com/c?search=1N4148",
+        "attempted": false,
+        "checked_at": "2026-10-08T16:44:22.055805+00:00",
+        "status": "robots_disallowed"
+      },
+      {
+        "url": "https://www.ozdisan.com/c?search=RC0603FR-0710KL",
+        "attempted": false,
+        "checked_at": "2026-10-08T16:44:22.056132+00:00",
+        "status": "robots_disallowed"
+      },
+      {
+        "url": "https://www.ozdisan.com/c?search=CC0603KRX7R9BB104",
+        "attempted": false,
+        "checked_at": "2026-10-08T16:44:22.056132+00:00",
+        "status": "robots_disallowed"
+      },
+      {
+        "url": "https://www.ozdisan.com/c?search=10K+0603",
+        "attempted": false,
+        "checked_at": "2026-10-08T16:44:22.057096+00:00",
+        "status": "robots_disallowed"
+      },
+      {
+        "url": "https://www.ozdisan.com/c?search=100nF+0603",
+        "attempted": false,
+        "checked_at": "2026-10-08T16:44:22.057096+00:00",
+        "status": "robots_disallowed"
+      },
+      {
+        "url": "https://www.ozdisan.com/c?search=SONAR-NONEXISTENT-20261008-A",
+        "attempted": false,
+        "checked_at": "2026-10-08T16:44:22.057096+00:00",
+        "status": "robots_disallowed"
+      },
+      {
+        "url": "https://www.ozdisan.com/c?search=SONAR-NONEXISTENT-20261008-B",
+        "attempted": false,
+        "checked_at": "2026-10-08T16:44:22.059110+00:00",
+        "status": "robots_disallowed"
+      },
+      {
+        "url": "https://www.ozdisan.com/p/amplifikatorler-242/texas-lm358p-13549",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:00.251689+00:00",
+        "http_status": 200,
+        "bytes": 258482,
+        "sha256": "05c285b16c3858a530a4a621946f71d79f9c1fff858abe8fdf810b85c554973d"
+      },
+      {
+        "url": "https://www.ozdisan.com/p/programlanabilir-zamanlayici-ve-osilator-entegreleri-211/texas-ne555p-14278",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:00.793524+00:00",
+        "http_status": 200,
+        "bytes": 257752,
+        "sha256": "48b8298dbe6b0fa03eff9d6a6e4643e333cc27a72b151d493e3cad82e6d0fa9a"
+      },
+      {
+        "url": "https://www.ozdisan.com/p/SMT---SMD-and-Chip-Resistors-194/yageo-rc0603fr-0710kl-379294",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:02.438829+00:00",
+        "http_status": 308,
+        "bytes": 60,
+        "sha256": "6352fc81805171288cb371f3d9f11be89bb080fe7cb2b7a79d59c3918ffbf3ad"
+      },
+      {
+        "url": "https://www.ozdisan.com/p/smt-smd-ve-cip-direncler-194/yageo-rc0603fr-0710kl-379294",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:04.912902+00:00",
+        "http_status": 200,
+        "bytes": 266979,
+        "sha256": "1538f6e83292875e9fc770303a2f4dcd61caca7faa330b12481ee54227114abb"
+      },
+      {
+        "url": "https://www.ozdisan.com/p/SMT---SMD-and-MLCC-Capacitors-184/yageo-cc0603krx7r9bb104-476015",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:06.609168+00:00",
+        "http_status": 308,
+        "bytes": 66,
+        "sha256": "5ed0e9888357dcb52a6a3f830933b2903f6354a010da153ba437824ba0af3d44"
+      },
+      {
+        "url": "https://www.ozdisan.com/p/smt-smd-ve-mlcc-kapasitorler-184/yageo-cc0603krx7r9bb104-476015",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:09.957678+00:00",
+        "http_status": 200,
+        "bytes": 258439,
+        "sha256": "517a19efb52928a26558168e3484f9f5cbbacadceea33093ad55292b7b8668b9"
+      },
+      {
+        "url": "https://www.ozdisan.com/p/amplifikatorler-242/texas-lm324n-ti-27237",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:27.294817+00:00",
+        "http_status": 200,
+        "bytes": 257570,
+        "sha256": "1a01a4af4629d6f2d4db785e48d2395224462d66ec549997dc284a9c7c1b2c77"
+      }
+    ],
+    "direnc": [
+      {
+        "url": "https://www.direnc.net/robots.txt",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:25.192865+00:00",
+        "http_status": 200,
+        "bytes": 2267,
+        "sha256": "5f526f55abc74ac8caac1d3f48688ac79bd083eb569806abc325847422033a5d"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=LM358P",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:26.023719+00:00",
+        "http_status": 200,
+        "bytes": 917607,
+        "sha256": "704a31985886e7eba087834cc8656ef0c9692c053ebb12df74da188e45ec3e3d"
+      },
+      {
+        "url": "https://www.direnc.net/lm358-single-supply-dual-operational-amplifiers",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:28.050810+00:00",
+        "http_status": 200,
+        "bytes": 961224,
+        "sha256": "5fe6737b6582fada856a1ad4722b4b2a1d10919bd35256f085cb1e2219355fec"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=NE555P",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:30.055611+00:00",
+        "http_status": 200,
+        "bytes": 906702,
+        "sha256": "9e9429f3c1de206a5da0e9e29c559074c6f931e4f127f2f27cdbfcaeb0c73940"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=LM324N",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:32.345396+00:00",
+        "http_status": 200,
+        "bytes": 923964,
+        "sha256": "e61e444989dff68cc0d71ab77475b65c20c8e2297756daff1f3ef059f4edf18e"
+      },
+      {
+        "url": "https://www.direnc.net/lm324n-5ma-5mv-opamp-entegresi-dip14",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:34.477913+00:00",
+        "http_status": 200,
+        "bytes": 960126,
+        "sha256": "6204a54a9f7d8c8c6c9943aeea01e397ee70ce5bf3c0012e85ecd2a47d8f7992"
+      },
+      {
+        "url": "https://www.direnc.net/lm324n-dip-14-op-amp-entegresi",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:35.956566+00:00",
+        "http_status": 200,
+        "bytes": 961001,
+        "sha256": "c36196cd82a78b402a32a13fe04d63103a732a3f1dc486aaef9b0da03cfa47d8"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=1N4148",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:38.080509+00:00",
+        "http_status": 200,
+        "bytes": 950843,
+        "sha256": "c8dc8ce99f92aa7d65f598c33e433d3f0592bf29804c0b42b2ca53268d3d46cf"
+      },
+      {
+        "url": "https://www.direnc.net/1n4148-smd-diyot-mic",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:39.975319+00:00",
+        "http_status": 200,
+        "bytes": 955776,
+        "sha256": "c03213f988b3b28a9277db5a0111570e140d152996131c0b620ebd156b1610eb"
+      },
+      {
+        "url": "https://www.direnc.net/1n4148w-ht-smd-hottech-diyot",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:42.957852+00:00",
+        "http_status": 200,
+        "bytes": 956201,
+        "sha256": "2656e18ecb9bbdffc4ecc744a4d834ed76a8cb49cbb3d5f28543c047d2841dd8"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=RC0603FR-0710KL",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:44.025770+00:00",
+        "http_status": 200,
+        "bytes": 906765,
+        "sha256": "8cffccb4a9f27fb8acee245aac5a394dc67366bf5ecaef7566f2dd5a812f7019"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=CC0603KRX7R9BB104",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:46.096791+00:00",
+        "http_status": 200,
+        "bytes": 906779,
+        "sha256": "4bcf7cc28e43afad20143cd71e399dc96ad86f0a93cd2c96844eeeda21c1d38c"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=10K+0603",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:51.274671+00:00",
+        "http_status": 200,
+        "bytes": 906716,
+        "sha256": "81078912f7d80c4c43197cb69b918e9c00f21b8bf00c2b72f505e650b6fb4d1f"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=100nF+0603",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:52.280171+00:00",
+        "http_status": 200,
+        "bytes": 906730,
+        "sha256": "e5c94afc7ce94e6d5436b84f52552eb9d141d255319c2e44fe0dd564d5176a19"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=SONAR-NONEXISTENT-20261008-A",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:54.375271+00:00",
+        "http_status": 200,
+        "bytes": 906856,
+        "sha256": "ce6e6b8651215ffe5f333239f1dce76be3ade8dc09bd286f60e68d122cc7e761"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=SONAR-NONEXISTENT-20261008-B",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:44:56.387584+00:00",
+        "http_status": 200,
+        "bytes": 906856,
+        "sha256": "e1b84089782297a3a2060b05ec9b72685f42cff9949b31525c0127d9eb40632d"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=10K",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:14.119530+00:00",
+        "http_status": 200,
+        "bytes": 1126095,
+        "sha256": "63962c5e12f320d86e903be62ef35771f6b0a83f5503264e8defdc590a5e6757"
+      },
+      {
+        "url": "https://www.direnc.net/10kg-yuk-hucresi-hx711-modul-agirlik-takimi",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:15.440551+00:00",
+        "http_status": 200,
+        "bytes": 956621,
+        "sha256": "327d6868f04f98eb4cb73eca00d4519cbdbe3517a1ee1711afb794eb96bc2aeb"
+      },
+      {
+        "url": "https://www.direnc.net/dijital-yuk-hucresi-agirlik-sensoru-10kg-hx711",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:17.486606+00:00",
+        "http_status": 200,
+        "bytes": 960695,
+        "sha256": "5f8ea422f423bf6bf71dce50b2f5720917f2e674e8a8deacf7efdd93e22a5bda"
+      },
+      {
+        "url": "https://www.direnc.net/arama?q=100nF",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:19.270250+00:00",
+        "http_status": 200,
+        "bytes": 1090617,
+        "sha256": "47b170a7f6832fae05d02340d61202094de701e42c9b45741dda94e3b4ccf253"
+      },
+      {
+        "url": "https://www.direnc.net/100nf-63v-25mm-multilayer",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:21.102415+00:00",
+        "http_status": 200,
+        "bytes": 952649,
+        "sha256": "ef64943ed797463d87b63b6c62cdc04a670e94fee2f39f77064fb4c88a8ce658"
+      },
+      {
+        "url": "https://www.direnc.net/100nf-63v-seramik",
+        "attempted": true,
+        "fetched_at": "2026-10-08T16:45:23.634391+00:00",
+        "http_status": 200,
+        "bytes": 956335,
+        "sha256": "c8f97d25883392bbf852d3ecdafea3ead1aebb2a594a609349136cbaf1e5c166"
+      }
+    ]
+  },
+  "execution_completed": true,
+  "integration_pass_claimed": false,
+  "note": "Completion means all investigations ran. Supplier PASS/PARTIAL/BLOCKED and GO decisions require report review; exit 0 is not an integration PASS."
+}

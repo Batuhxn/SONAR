@@ -1,0 +1,5 @@
+# Runtime dependencies tested on Windows 11 / Python 3.12.10.
+# Install this before `pip install --no-deps -e .`.
+beautifulsoup4==4.15.0
+soupsieve==2.10
+typing_extensions==4.16.0

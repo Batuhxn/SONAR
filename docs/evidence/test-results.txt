@@ -1,0 +1,64 @@
+Windows 11 Pro 64-bit (10.0.26200), Python 3.12.10
+Command: python -m unittest discover -s tests -v
+Exit code: 0
+
+{
+  "supplier": "direnc",
+  "operation": "search",
+  "query": "TEST",
+  "status": "partial",
+  "offers": [],
+  "message": "",
+  "evidence": []
+}
+
+first: rate_limited; 0 offers
+second: skipped; 0 offers
+Evidence written: C:\Users\Batuhan\AppData\Local\Temp\tmpuqubduta\result.json
+test_adapters_share_contract (test_adapters.AdapterTests.test_adapters_share_contract) ... ok
+test_direnc_conflicting_stock (test_adapters.AdapterTests.test_direnc_conflicting_stock) ... ok
+test_direnc_explicit_mpn_and_currency (test_adapters.AdapterTests.test_direnc_explicit_mpn_and_currency) ... ok
+test_direnc_missing_stock_and_price (test_adapters.AdapterTests.test_direnc_missing_stock_and_price) ... ok
+test_direnc_unknown_identity_and_stock_count (test_adapters.AdapterTests.test_direnc_unknown_identity_and_stock_count) ... ok
+test_direnc_vat_and_quantity_breaks (test_adapters.AdapterTests.test_direnc_vat_and_quantity_breaks) ... ok
+test_limits_rejected (test_adapters.AdapterTests.test_limits_rejected) ... ok
+test_ozdisan_conflicting_stock_suppressed (test_adapters.AdapterTests.test_ozdisan_conflicting_stock_suppressed) ... ok
+test_ozdisan_hidden_stock_and_price (test_adapters.AdapterTests.test_ozdisan_hidden_stock_and_price) ... ok
+test_ozdisan_normalization_and_packaging (test_adapters.AdapterTests.test_ozdisan_normalization_and_packaging) ... ok
+test_ozdisan_out_of_stock_distinct_from_unknown (test_adapters.AdapterTests.test_ozdisan_out_of_stock_distinct_from_unknown) ... ok
+test_ozdisan_search_does_not_mask_robots_block (test_adapters.AdapterTests.test_ozdisan_search_does_not_mask_robots_block) ... ok
+test_product_request_failure_propagates (test_adapters.AdapterTests.test_product_request_failure_propagates) ... ok
+test_product_unexpected_format_is_parse_error (test_adapters.AdapterTests.test_product_unexpected_format_is_parse_error) ... ok
+test_search_discovers_supplier_links (test_adapters.AdapterTests.test_search_discovers_supplier_links) ... ok
+test_search_explicit_empty_vs_changed (test_adapters.AdapterTests.test_search_explicit_empty_vs_changed) ... ok
+test_undocumented_tier_vat_never_asserted (test_adapters.AdapterTests.test_undocumented_tier_vat_never_asserted) ... ok
+test_invalid_input_file_exit_code (test_cli.CliTests.test_invalid_input_file_exit_code) ... Input/execution error: [Errno 2] No such file or directory: 'C:\\Users\\Batuhan\\AppData\\Local\\Temp\\tmpn2277h87\\absent.json'
+ok
+test_search_partial_exit_code (test_cli.CliTests.test_search_partial_exit_code) ... ok
+test_verify_stops_blocked_supplier_and_is_not_pass (test_cli.CliTests.test_verify_stops_blocked_supplier_and_is_not_pass) ... ok
+test_decimal_locales_and_rejections (test_normalize.NormalizationTests.test_decimal_locales_and_rejections) ... ok
+test_exact_only_full_mpn (test_normalize.NormalizationTests.test_exact_only_full_mpn) ... ok
+test_integer_quantity_constraints (test_normalize.NormalizationTests.test_integer_quantity_constraints) ... ok
+test_json_keeps_decimal_precision (test_normalize.NormalizationTests.test_json_keeps_decimal_precision) ... ok
+test_missing_mpn_never_exact (test_normalize.NormalizationTests.test_missing_mpn_never_exact) ... ok
+test_stale_and_future_timestamps (test_normalize.NormalizationTests.test_stale_and_future_timestamps) ... ok
+test_title_candidate_is_observed (test_normalize.NormalizationTests.test_title_candidate_is_observed) ... ok
+test_equal_length_allow_wins (test_transport.RobotsTests.test_equal_length_allow_wins) ... ok
+test_user_agent_groups_are_not_confused (test_transport.RobotsTests.test_user_agent_groups_are_not_confused) ... ok
+test_wildcards_forbidden_search_and_api (test_transport.RobotsTests.test_wildcards_forbidden_search_and_api) ... ok
+test_hash_timestamp_and_status_recorded (test_transport.TransportTests.test_hash_timestamp_and_status_recorded) ... ok
+test_host_scheme_and_credentials_rejected (test_transport.TransportTests.test_host_scheme_and_credentials_rejected) ... ok
+test_http_failures_and_no_retry (test_transport.TransportTests.test_http_failures_and_no_retry) ... ok
+test_minimum_delay_and_crawl_delay (test_transport.TransportTests.test_minimum_delay_and_crawl_delay) ... ok
+test_non_html_and_challenge_page (test_transport.TransportTests.test_non_html_and_challenge_page) ... ok
+test_redirect_target_checked_before_request (test_transport.TransportTests.test_redirect_target_checked_before_request) ... ok
+test_redirect_to_disallowed_path_checked (test_transport.TransportTests.test_redirect_to_disallowed_path_checked) ... ok
+test_robots_404_allows_following_request (test_transport.TransportTests.test_robots_404_allows_following_request) ... ok
+test_robots_disallowed_sends_no_product_request (test_transport.TransportTests.test_robots_disallowed_sends_no_product_request) ... ok
+test_robots_unavailable_fails_closed (test_transport.TransportTests.test_robots_unavailable_fails_closed) ... ok
+test_timeout_and_network_failure (test_transport.TransportTests.test_timeout_and_network_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.414s
+
+OK
