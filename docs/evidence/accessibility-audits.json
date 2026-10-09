@@ -1,0 +1,98 @@
+[
+  {
+    "theme": "light",
+    "width": 1440,
+    "name": "Session BoMs 3",
+    "violations": []
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "name": "BoM",
+    "violations": []
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "name": "Suppliers",
+    "violations": []
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "name": "Purchase list",
+    "violations": []
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "name": "Session BoMs 3",
+    "violations": []
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "name": "BoM",
+    "violations": []
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "name": "Suppliers",
+    "violations": []
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "name": "Purchase list",
+    "violations": []
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "name": "Session BoMs 3",
+    "violations": []
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "name": "BoM",
+    "violations": []
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "name": "Suppliers",
+    "violations": []
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "name": "Purchase list",
+    "violations": []
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "name": "Session BoMs 3",
+    "violations": []
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "name": "BoM",
+    "violations": []
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "name": "Suppliers",
+    "violations": []
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "name": "Purchase list",
+    "violations": []
+  }
+]

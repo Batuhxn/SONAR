@@ -8,17 +8,22 @@ const state = {
   csrf: "",
   page: "dashboard",
   query: "",
+  filter: "all",
+  expanded: new Set(),
+  expired: false,
+  renderVersion: 0,
   jobs: new Map(),
   polling: new Set(),
   maxUpload: 0,
 };
 const titles = {
-  dashboard: "Dashboard",
-  workspace: "BoM Workspace",
-  suppliers: "Supplier Explorer",
-  procurement: "Procurement",
+  dashboard: "Session BoMs",
+  workspace: "BoM",
+  suppliers: "Suppliers",
+  procurement: "Purchase list",
 };
 let toastTimer;
+let modalOpener;
 
 // All external data goes through textContent / DOM properties, never HTML parsing.
 function el(tag, attrs = {}, ...children) {
@@ -41,7 +46,11 @@ function el(tag, attrs = {}, ...children) {
   return node;
 }
 const btn = (text, handler, cls = "") =>
-  el("button", { type: "button", class: cls, onclick: handler }, text);
+  el(
+    "button",
+    { type: "button", class: cls, "aria-label": text, onclick: handler },
+    text,
+  );
 const badge = (text, cls = "") => el("span", { class: `badge ${cls}` }, text);
 function notify(text) {
   $("#toast").textContent = text;
@@ -76,12 +85,30 @@ async function api(path, options = {}) {
               ?.map((e) => `${e.loc.slice(1).join(".")}: ${e.msg}`)
               .join(";") || message;
     } catch {}
-    throw new Error(message);
+    if (response.status === 401) {
+      state.expired = true;
+      state.csrf = "";
+      state.boms = [];
+      state.jobs.clear();
+      $("#bom-count").textContent = "0";
+      $("#dialog").close();
+      render();
+      message =
+        "Your temporary session expired. Previous BoMs are no longer available. Start a new session and import your files again.";
+    }
+    if (response.status === 429) {
+      const retry = response.headers.get("Retry-After");
+      if (retry) message += ` Try again after ${retry} seconds.`;
+    }
+    const error = new Error(message);
+    error.status = response.status;
+    throw error;
   }
   return response.status === 204 ? null : response.json();
 }
 async function refresh() {
   const data = await api("/api/session");
+  state.expired = false;
   state.csrf = data.csrf;
   state.boms = data.boms;
   state.maxUpload = data.max_upload;
@@ -117,7 +144,7 @@ function heading(title, subtitle, action) {
     el(
       "div",
       {},
-      el("div", { class: "eyebrow" }, "SONAR / A1"),
+      el("div", { class: "eyebrow" }, "SONAR / A1.1"),
       el("h1", {}, title),
       el("p", {}, subtitle),
     ),
@@ -181,7 +208,12 @@ function bomSelect() {
 function table(headers, rows) {
   return el(
     "div",
-    { class: "table-wrap" },
+    {
+      class: "table-wrap",
+      tabindex: "0",
+      role: "region",
+      "aria-label": "Scrollable data table",
+    },
     el(
       "table",
       {},
@@ -199,6 +231,7 @@ function table(headers, rows) {
   );
 }
 function modal(title, subtitle) {
+  modalOpener = document.activeElement;
   $("#dialog").setAttribute("aria-label", title);
   const body = $("#dialog-body");
   body.replaceChildren();
@@ -207,7 +240,16 @@ function modal(title, subtitle) {
       "div",
       { class: "dialog-head" },
       el("div", {}, el("h2", {}, title), el("p", {}, subtitle)),
-      btn("×", () => $("#dialog").close(), "text-button"),
+      el(
+        "button",
+        {
+          type: "button",
+          class: "text-button",
+          "aria-label": "Close dialog",
+          onclick: () => $("#dialog").close(),
+        },
+        "×",
+      ),
     ),
   );
   $("#dialog").showModal();
@@ -356,158 +398,128 @@ async function previewFile(file, sheet) {
 }
 
 function dashboard(main) {
-  const components = state.boms.flatMap((b) => b.components);
-  const selected = components.filter((c) => c.selected && c.dnp !== true);
-  const choiceCount = selected.filter((c) => c.choice).length;
-  const issues = components.filter((c) => c.issues.length).length;
   main.append(
-    el(
-      "div",
-      { class: "hero" },
+    heading(
+      "Session BoMs",
+      "Your current builds, from source file to purchase list.",
+    ),
+  );
+  const b = activeBom();
+  if (b) {
+    const populated = b.components.filter((c) => c.dnp === false && c.selected);
+    const chosen = populated.filter((c) => c.choice).length;
+    const issues = b.components.filter((c) => c.issues.length).length;
+    main.append(
       el(
-        "div",
-        {},
-        el("div", { class: "eyebrow" }, "YOUR ENGINEERING WORKSPACE"),
-        el("h1", {}, "From design to procurement."),
+        "section",
+        { class: "continue-card", "aria-label": "Continue current BoM" },
         el(
-          "p",
-          {},
-          "Bring your BoM into focus. Review components, explore Turkish suppliers and build a purchasing list you can trust.",
+          "div",
+          { class: "section-head" },
+          el(
+            "div",
+            {},
+            el("small", {}, "Continue"),
+            el("h2", {}, b.name),
+            el(
+              "p",
+              { class: "mono" },
+              `${b.filename} · ${b.components.length} lines · ${b.boards} boards`,
+            ),
+          ),
+          btn("Continue →", () => navigate("workspace"), "primary"),
         ),
-        btn("+ Import a BoM", addUpload, "primary"),
-      ),
-      el(
-        "div",
-        { class: "hero-art", "aria-hidden": "true" },
-        el("div", { class: "radar" }, el("span", {}, "SIGNAL → SOURCE")),
-      ),
-    ),
-  );
-  main.append(
-    el(
-      "div",
-      { class: "stats" },
-      stat(
-        "BoMs in this session",
-        state.boms.length,
-        "Altium Designer & KiCad",
-      ),
-      stat(
-        "Component rows",
-        components.length,
-        `${components.filter((c) => c.dnp === true).length} marked DNP`,
-      ),
-      stat(
-        "Required components",
-        selected
-          .reduce((sum, c) => sum + (c.required || 0), 0)
-          .toLocaleString(),
-        `${selected.filter((c) => c.required === null).length} rows have unresolved quantities`,
-      ),
-      stat(
-        "Products selected",
-        `${choiceCount} / ${selected.length}`,
-        `${issues} rows need review`,
-      ),
-    ),
-  );
-  const recent = el(
-    "div",
-    { class: "panel" },
-    el(
-      "div",
-      { class: "section-head" },
-      el("h2", {}, "Session BoMs"),
-      btn("View workspace →", () => navigate("workspace"), "text-button"),
-    ),
-  );
-  if (!state.boms.length)
-    recent.append(
-      empty(
-        "Start with your design",
-        "Import an Altium or KiCad BoM. Your real project statistics will appear here.",
-        btn("Choose a BoM file", addUpload, "primary"),
+        el("progress", {
+          value: chosen,
+          max: Math.max(1, populated.length),
+          "aria-label": `${chosen} of ${populated.length} selected populated rows have a supplier choice`,
+        }),
+        el(
+          "div",
+          { class: "actions" },
+          el(
+            "span",
+            {},
+            `${chosen} of ${populated.length} supplier products chosen`,
+          ),
+          badge(`${issues} rows need review`, issues ? "warn" : "good"),
+        ),
       ),
     );
-  for (const b of [...state.boms].reverse())
-    recent.append(
-      el(
-        "div",
-        { class: "bom-row" },
+    const recent = el(
+      "section",
+      { class: "panel", "aria-label": "BoMs in this temporary session" },
+      el("h2", {}, "In this session"),
+    );
+    for (const bom of [...state.boms].reverse())
+      recent.append(
         el(
           "div",
-          { class: "file-icon" },
-          b.filename.split(".").pop().toUpperCase(),
-        ),
-        el(
-          "div",
-          { class: "bom-meta" },
-          el("strong", {}, b.name),
+          { class: "bom-row" },
           el(
-            "small",
-            {},
-            `${b.components.length} rows · ${b.boards} PCB${b.boards === 1 ? "" : "s"}`,
+            "div",
+            { class: "bom-meta" },
+            el("strong", {}, bom.name),
+            el(
+              "small",
+              { class: "mono" },
+              `${bom.filename} · ${bom.components.length} lines · ${bom.boards} boards`,
+            ),
+          ),
+          badge(
+            `${bom.components.filter((c) => c.issues.length).length} to review`,
+            bom.components.some((c) => c.issues.length) ? "warn" : "good",
+          ),
+          btn(
+            "Open →",
+            () => {
+              state.active = bom.id;
+              state.component = null;
+              navigate("workspace");
+            },
+            "text-button",
           ),
         ),
-        badge(
-          `${b.components.filter((c) => c.issues.length).length} to review`,
-          b.components.some((c) => c.issues.length) ? "warn" : "good",
-        ),
-        btn(
-          "Open →",
-          () => {
-            state.active = b.id;
-            navigate("workspace");
-          },
-          "text-button",
-        ),
-      ),
-    );
-  const readiness = el(
-    "div",
-    { class: "panel" },
-    el("h2", {}, "Procurement readiness"),
-    el("p", {}, "A clear view of what is known and what needs your attention."),
+      );
+    main.append(recent);
+  }
+  const upload = el(
+    "section",
+    { class: "upload-zone", "aria-label": "Import a BoM" },
+    el("div", { class: "empty-mark", "aria-hidden": "true" }, "↥"),
+    el("h2", {}, b ? "Start another build" : "Start with your design"),
+    el("span", {}, "Drop a BoM file here"),
+    el("p", {}, "Altium or KiCad · .csv .xlsx .tsv"),
+    btn("Choose a BoM file", addUpload),
   );
-  readiness.append(
-    el(
-      "div",
-      { class: "check-list" },
-      ...[
-        [
-          `${components.length - issues} rows without validation warnings`,
-          "Warnings remain visible in the workspace.",
-        ],
-        [
-          `${choiceCount} supplier products selected`,
-          "Product candidates require your review.",
-        ],
-        [
-          "Costs preserve their currency and VAT basis",
-          "Unknown data never becomes a zero.",
-        ],
-      ].map(([title, sub]) =>
-        el(
-          "div",
-          { class: "check-item" },
-          el("span", {}, "↗"),
-          el("div", {}, el("strong", {}, title), el("p", {}, sub)),
-        ),
-      ),
-    ),
+  upload.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    upload.classList.add("dragging");
+  });
+  upload.addEventListener("dragleave", () =>
+    upload.classList.remove("dragging"),
   );
-  readiness.append(
+  upload.addEventListener("drop", (e) => {
+    e.preventDefault();
+    upload.classList.remove("dragging");
+    if (e.dataTransfer.files.length !== 1) {
+      notify("Drop one BoM file at a time.");
+      return;
+    }
+    previewFile(e.dataTransfer.files[0]).catch(fail);
+  });
+  main.append(
+    upload,
     notice(
-      "BoMs are stored in this browser’s server session. Export before the session expires or the server restarts.",
+      "BoMs belong to this temporary browser session. Export your source and purchase list before the session expires or the server restarts.",
     ),
   );
-  main.append(el("div", { class: "grid-two" }, recent, readiness));
 }
 
 function workspace(main) {
   main.append(
     heading(
-      "BoM Workspace",
+      "BoM",
       "Inspect the design. Resolve uncertainty. Set your production quantity.",
       btn("+ Import BoM", addUpload, "primary"),
     ),
@@ -627,18 +639,48 @@ function workspace(main) {
     "aria-label": "Search components",
   });
   const results = el("div");
+  const filters = el("div", {
+    class: "filters",
+    "aria-label": "Filter components",
+  });
+  for (const [value, label] of [
+    ["all", "All"],
+    ["review", "Needs review"],
+    ["ready", "Ready"],
+    ["chosen", "Product chosen"],
+    ["dnp", "DNP"],
+  ]) {
+    const filter = btn(label, () => {
+      state.filter = value;
+      filters
+        .querySelectorAll("button")
+        .forEach((node) =>
+          node.setAttribute("aria-pressed", String(node === filter)),
+        );
+      draw();
+    });
+    filter.setAttribute("aria-pressed", String(state.filter === value));
+    filters.append(filter);
+  }
+  main.append(filters);
   const draw = () => {
     const q = search.value.toLowerCase();
     state.query = search.value;
-    const filtered = b.components.filter((c) =>
-      `${c.name} ${c.mpn} ${c.references}`.toLowerCase().includes(q),
+    const filtered = b.components.filter(
+      (c) =>
+        `${c.name} ${c.mpn} ${c.references}`.toLowerCase().includes(q) &&
+        (state.filter === "all" ||
+          (state.filter === "review" && c.issues.length > 0) ||
+          (state.filter === "ready" && c.dnp === false && !c.issues.length) ||
+          (state.filter === "chosen" && c.choice) ||
+          (state.filter === "dnp" && c.dnp === true)),
     );
     results.replaceChildren();
     const all = el("input", {
       type: "checkbox",
       "aria-label": "Select all visible populated components",
       checked:
-        filtered.length > 0 &&
+        filtered.some((c) => c.dnp === false) &&
         filtered.filter((c) => c.dnp === false).every((c) => c.selected),
       onchange: async (e) => {
         all.disabled = true;
@@ -685,68 +727,114 @@ function workspace(main) {
             ? badge(`${c.issues.length} warnings`, "warn")
             : badge("Ready", "good");
       status.title = c.issues.join("\n");
-      return el(
-        "tr",
-        { class: c.issues.length ? "row-warning" : "" },
-        el("td", {}, check),
-        el("td", { class: "mono" }, String(index + 1).padStart(2, "0")),
+      const details = el("details", { id: `row-${c.id}` });
+      details.open = state.expanded.has(c.id);
+      details.addEventListener("toggle", () => {
+        if (details.open) state.expanded.add(c.id);
+        else state.expanded.delete(c.id);
+      });
+      const summary = el(
+        "summary",
+        { "aria-controls": `detail-${c.id}` },
+        el("span", { class: "mono" }, c.mpn || "MPN missing"),
         el(
-          "td",
-          {},
-          el(
-            "div",
-            { class: "component-name", title: c.name },
-            c.name || "Unnamed component",
-          ),
+          "div",
+          { class: "row-description" },
+          el("div", { class: "component-name" }, c.name || "Unnamed component"),
           el(
             "div",
             { class: "secondary" },
             c.references || "References missing",
           ),
         ),
-        el("td", { class: "mono" }, c.mpn || "—"),
-        el("td", { class: "mono" }, c.quantity || "—"),
         el(
-          "td",
-          { class: "mono" },
-          c.required === null ? "Unknown" : c.required.toLocaleString(),
+          "div",
+          { class: "row-quantity" },
+          el(
+            "span",
+            { class: "mono" },
+            c.required === null ? "Unknown" : c.required.toLocaleString(),
+          ),
+          el("div", { class: "secondary" }, "required"),
         ),
-        el("td", {}, status),
+        el("div", { class: "row-status" }, status),
+      );
+      details.append(
+        summary,
         el(
-          "td",
-          {},
-          c.choice ? badge("Selected", "good") : badge("Unassigned"),
-        ),
-        el(
-          "td",
-          {},
-          btn("Edit", () => editComponent(b, c), "compact"),
-          btn(
-            "Explore",
-            () => {
-              state.component = c.id;
-              navigate("suppliers");
-            },
-            "text-button",
+          "div",
+          { class: "row-detail", id: `detail-${c.id}` },
+          el(
+            "dl",
+            { class: "facts" },
+            [
+              ["Qty / PCB", c.quantity || "Unknown"],
+              [
+                "Population",
+                c.dnp === null
+                  ? "Unknown — review"
+                  : c.dnp
+                    ? "Do not populate"
+                    : "Populate",
+              ],
+              [
+                "Supplier choice",
+                c.choice
+                  ? `${c.choice.supplier} · tier ${c.choice.tier + 1}`
+                  : "Unassigned",
+              ],
+            ].map(([k, v]) => el("div", {}, el("dt", {}, k), el("dd", {}, v))),
+          ),
+          c.issues.length
+            ? el(
+                "ul",
+                { class: "validation-list" },
+                c.issues.map((issue) => el("li", {}, issue)),
+              )
+            : null,
+          el(
+            "details",
+            {},
+            el("summary", {}, "Original source fields"),
+            el(
+              "pre",
+              { class: "source-fields" },
+              Object.entries(c.raw)
+                .map(([k, v]) => `${k}: ${v}`)
+                .join("\n"),
+            ),
+          ),
+          el(
+            "div",
+            { class: "actions" },
+            btn("Edit component", () => editComponent(b, c)),
+            btn(
+              "Explore suppliers →",
+              () => {
+                state.component = c.id;
+                navigate("suppliers");
+              },
+              "primary",
+            ),
           ),
         ),
       );
+      return el("article", { class: "component-row" }, check, details);
     });
+    all.indeterminate =
+      filtered.some((c) => c.dnp === false && c.selected) && !all.checked;
+    const selected = b.components.filter((c) => c.selected && c.dnp === false);
     results.append(
-      table(
-        [
-          all,
-          "#",
-          "COMPONENT / REFERENCES",
-          "MANUFACTURER MPN",
-          "QTY / PCB",
-          "REQUIRED",
-          "VALIDATION",
-          "SUPPLIER",
-          "ACTIONS",
-        ],
-        rows,
+      el(
+        "div",
+        { class: "bulk-bar" },
+        el("label", { class: "actions" }, all, "Select visible populated rows"),
+        el("span", { class: "muted" }, `${selected.length} selected`),
+        selected.length
+          ? btn("Mark selected DNP", () => bulkDnp(b, selected))
+          : null,
       ),
+      el("div", { class: "component-list" }, rows),
       el(
         "div",
         { class: "table-note" },
@@ -754,7 +842,7 @@ function workspace(main) {
         el(
           "span",
           {},
-          "Edit a row to view all source fields. Duplicate rows are never merged.",
+          "Expand a row for quantities, source fields and actions.",
         ),
       ),
     );
@@ -790,6 +878,52 @@ function workspace(main) {
   main.append(results);
 }
 
+function bulkDnp(bom, components) {
+  const body = modal(
+    "Mark selected components DNP?",
+    `${components.length} rows will be excluded from procurement. Their supplier results and choices will be cleared.`,
+  );
+  const apply = btn(
+    "Mark DNP",
+    async () => {
+      apply.disabled = true;
+      let completed = 0;
+      try {
+        // Each response remains authoritative; stop on the first failed mutation.
+        for (const c of components) {
+          replaceBom(
+            await api(`/api/boms/${bom.id}/components/${c.id}`, {
+              method: "PATCH",
+              body: { dnp: true },
+            }),
+          );
+          completed++;
+        }
+        $("#dialog").close();
+        render();
+        notify(`${completed} rows marked DNP`);
+      } catch (error) {
+        render();
+        modalError(
+          body,
+          new Error(`${completed} rows updated. ${error.message}`),
+        );
+      } finally {
+        apply.disabled = false;
+      }
+    },
+    "danger",
+  );
+  body.append(
+    el(
+      "div",
+      { class: "dialog-footer" },
+      btn("Cancel", () => $("#dialog").close()),
+      apply,
+    ),
+  );
+}
+
 function editComponent(bom, c) {
   const body = modal(
     "Edit component",
@@ -810,7 +944,7 @@ function editComponent(bom, c) {
     [
       ["false", "Populate"],
       ["true", "DNP — do not populate"],
-      ["unknown", "Unknown — requires review"],
+      ...(c.dnp === null ? [["unknown", "Unknown — requires review"]] : []),
     ],
     c.dnp === null ? "unknown" : String(c.dnp),
     null,
@@ -905,9 +1039,14 @@ async function pollJob(id) {
       if (job.state === "done") {
         await refresh();
         render();
+        const stale = (job.results || []).filter(
+          (result) => result.applied === false,
+        ).length;
         notify(
-          job.message ||
-            `Supplier lookup complete: ${job.completed} of ${job.total} components`,
+          stale
+            ? `${stale} supplier results were not applied because their components changed or were removed. Search those rows again.`
+            : job.message ||
+                `Supplier lookup complete: ${job.completed} of ${job.total} components`,
         );
         return;
       }
@@ -944,7 +1083,7 @@ function drawJobs() {
 function suppliers(main) {
   main.append(
     heading(
-      "Supplier Explorer",
+      "Suppliers",
       "Find candidates. Compare source information. Make an informed selection.",
     ),
   );
@@ -1358,20 +1497,21 @@ function offerCard(bom, c, result, offer, index) {
 async function purchasing(main) {
   main.append(
     heading(
-      "Procurement",
+      "Purchase list",
       "Review selected products, known costs and unresolved information.",
       el("a", { href: "/api/procurement.csv" }, "↓ Export procurement CSV"),
     ),
   );
+  const version = state.renderVersion;
   const loading = el(
     "div",
-    { class: "loading" },
+    { class: "loading", role: "status" },
     "Preparing procurement review…",
   );
   main.append(loading);
   try {
     const report = await api("/api/procurement");
-    if (state.page !== "procurement") return;
+    if (state.page !== "procurement" || version !== state.renderVersion) return;
     loading.remove();
     if (!report.lines.length) {
       main.append(
@@ -1566,6 +1706,13 @@ async function purchasing(main) {
 }
 
 function render() {
+  const oldPage = state.page;
+  const focused = document.activeElement;
+  const focusKey = focused?.getAttribute("aria-label") || focused?.id;
+  const focusRow = focused
+    ?.closest(".component-row")
+    ?.querySelector("details")?.id;
+  state.renderVersion++;
   state.page =
     location.hash.slice(1) in titles ? location.hash.slice(1) : "dashboard";
   $("#breadcrumb").textContent = titles[state.page];
@@ -1577,15 +1724,48 @@ function render() {
     else link.removeAttribute("aria-current");
   });
   const main = $("#main");
+  main.dataset.page = state.page;
   main.replaceChildren();
+  if (state.expired) {
+    main.append(
+      empty(
+        "Your session expired",
+        "Temporary BoMs are no longer available. Import your files again after starting a new session.",
+        btn(
+          "Start a new session",
+          () => refresh().then(render).catch(fail),
+          "primary",
+        ),
+      ),
+    );
+    return;
+  }
   ({ dashboard, workspace, suppliers, procurement: purchasing })[state.page](
     main,
   );
+  if (oldPage !== state.page) {
+    main.focus();
+    window.scrollTo(0, 0);
+  } else if (
+    focusKey &&
+    main.contains(focused) === false &&
+    focused !== document.body
+  ) {
+    const scope = focusRow
+      ? document.getElementById(focusRow)?.closest(".component-row")
+      : main;
+    const replacement = [
+      ...(scope || main).querySelectorAll("[aria-label], [id]"),
+    ].find((node) => (node.getAttribute("aria-label") || node.id) === focusKey);
+    replacement?.focus();
+  }
 }
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
-  $("#theme").textContent =
+  const label =
     theme === "dark" ? "Switch to light theme" : "Switch to dark theme";
+  $("#theme").setAttribute("aria-label", label);
+  $("#theme").title = label;
 }
 let preferredTheme;
 try {
@@ -1603,13 +1783,30 @@ $("#theme").addEventListener("click", () => {
     localStorage.setItem("sonar-theme", theme);
   } catch {}
 });
-$("#theme-mobile").addEventListener("click", () => $("#theme").click());
+$("#dialog").addEventListener("close", () => {
+  if (modalOpener?.isConnected) modalOpener.focus();
+  else $("#main").focus();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !$("#dialog").open) {
+    const row = document.activeElement.closest(".component-row details[open]");
+    if (row) {
+      row.open = false;
+      state.expanded.delete(row.id.slice(4));
+      row.querySelector("summary").focus();
+    }
+  }
+});
 // Mobile theme access: same keyboard shortcut is available at every screen size.
 document.addEventListener("keydown", (e) => {
   if (e.altKey && e.key.toLowerCase() === "t") {
     e.preventDefault();
     $("#theme").click();
   }
+});
+$(".skip").addEventListener("click", (e) => {
+  e.preventDefault();
+  $("#main").focus();
 });
 window.addEventListener("hashchange", render);
 refresh()

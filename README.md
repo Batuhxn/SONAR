@@ -180,3 +180,7 @@ No full supplier HTML, executable site scripts, reviews, customer data, cookies
 or response headers are committed. Website terms are separate from robots
 permission; commercial reuse or redistribution must be assessed before a public
 service. No supplier permission or stable official API agreement is claimed.
+
+## A1.1 frontend redesign
+
+The `design/sonar-ui` branch integrates the supplied SONAR design system into the existing A1 frontend. See [A1.1 validation and screenshots](docs/A1_1_VALIDATION.md) for verified tests, browser reproduction and limits. A1 backend contracts and temporary-session behavior remain unchanged.
