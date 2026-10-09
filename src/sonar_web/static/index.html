@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>SONAR · Engineering procurement</title>
+    <link rel="icon" href="/static/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to workspace</a>
+    <aside class="sidebar">
+      <a href="#dashboard" class="brand"
+        ><img src="/static/logo.svg" width="34" height="34" alt="" /><span
+          >SONAR<small>ENGINEERING PROCUREMENT</small></span
+        ></a
+      >
+      <div class="nav-label">WORKSPACE</div>
+      <nav aria-label="Primary navigation">
+        <a href="#dashboard" data-page="dashboard"
+          ><span class="nav-icon">▦</span>Dashboard</a
+        >
+        <a href="#workspace" data-page="workspace"
+          ><span class="nav-icon">▤</span>BoM Workspace<span
+            id="bom-count"
+            class="nav-count"
+            >0</span
+          ></a
+        >
+        <a href="#suppliers" data-page="suppliers"
+          ><span class="nav-icon">⌕</span>Supplier Explorer</a
+        >
+        <a href="#procurement" data-page="procurement"
+          ><span class="nav-icon">≡</span>Procurement</a
+        >
+      </nav>
+      <div class="sidebar-bottom">
+        <span class="live-dot"></span> Local workspace<small
+          >Self-hosted · A1 release<br />Session data is temporary.</small
+        ><button id="theme" class="theme-button">Switch to dark theme</button>
+      </div>
+    </aside>
+    <div class="shell">
+      <header class="topbar">
+        <div>
+          <span class="muted">Workspace</span><span class="slash">/</span
+          ><strong id="breadcrumb">Dashboard</strong>
+        </div>
+        <div class="actions">
+          <button
+            id="theme-mobile"
+            class="compact mobile-only"
+            aria-label="Toggle color theme"
+          >
+            ◐ Theme</button
+          ><span class="session-pill"
+            ><span class="live-dot"></span> Private browser session</span
+          >
+        </div>
+      </header>
+      <main id="main" tabindex="-1">
+        <div class="loading">Connecting to your workspace…</div>
+      </main>
+      <footer>
+        SONAR A1<span
+          >Engineering decisions stay with you. No automatic purchasing.</span
+        >
+      </footer>
+    </div>
+    <div id="toast" role="status" aria-live="polite" hidden></div>
+    <dialog id="dialog"><div id="dialog-body"></div></dialog>
+  </body>
+</html>

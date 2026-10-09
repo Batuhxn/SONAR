@@ -8,3 +8,7 @@ dist/
 .env
 live-output/
 *.log
+output/
+.playwright-cli/
+.env.*
+!.env.example

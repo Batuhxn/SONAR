@@ -1,4 +1,70 @@
-# SONAR — A0 Supplier Integration Feasibility
+# SONAR — A1 Engineering Procurement Workspace
+
+SONAR is a self-hosted web application for reviewing electronics BoMs and
+preparing procurement lists from Turkish suppliers. It runs locally on Windows
+and includes a Docker Compose configuration for later laboratory deployment.
+No paid services, cloud infrastructure, API keys or automatic purchasing.
+
+## Start A1 on Windows 11
+
+Python 3.11+ is required (validated with Python 3.12.10). From PowerShell:
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.lock
+.\.venv\Scripts\python.exe -m pip install --no-deps -e .
+.\.venv\Scripts\python.exe -m sonar_web
+```
+
+Open **[http://127.0.0.1:8000](http://127.0.0.1:8000)**. Stop with Ctrl+C.
+The `sonar` console command starts the same application. The package name remains
+`sonar-a0` for compatibility; the existing `sonar-a0` CLI remains available.
+Node.js is **not** required to run SONAR; frontend assets are shipped locally.
+
+1. Import an Altium CSV/XLSX or KiCad CSV/TSV in **BoM Workspace**.
+2. Review detected columns; choose a worksheet or manual mappings as needed.
+3. Edit rows, resolve warnings, select populated components and set PCB quantity.
+4. Use **Supplier Explorer** to search Direnc.net or retrieve known product URLs
+   from either supplier. Özdisan automatic discovery remains restricted.
+5. Compare source fields and price tiers. Acknowledge uncertain product matches
+   before selection. Review quantities and missing information in **Procurement**.
+6. Export procurement CSV. Original source fields are also exportable per BoM.
+
+Try the representative **synthetic** engineering exports in
+[`examples/altium_a1.csv`](examples/altium_a1.csv),
+[`examples/altium_a1.xlsx`](examples/altium_a1.xlsx) and
+[`examples/kicad_a1.tsv`](examples/kicad_a1.tsv). They are test designs, not actual
+laboratory purchasing requirements. No demo statistics are preloaded in the app.
+
+**Session storage:** BoMs are private to the browser's session and held only in
+server memory. Default inactivity expiry is two hours; server restarts clear all
+sessions. Export work before leaving. A1 has no shared project database or user
+accounts. Use a trusted local or IT-restricted laboratory network.
+
+**Costs:** Known item costs use Decimal arithmetic and remain grouped by supplier,
+currency and VAT basis. Unknown costs remain empty in exports; no currency
+conversion, inferred VAT, shipping charges or purchasing guarantee is included.
+Reported MOQ, order multiples and chosen tier minimums can increase order quantity.
+Changing component data invalidates previous results and selections; changing PCB
+quantity recalculates the chosen product's costs without a new supplier request.
+
+## A1 documentation and validation
+
+- [Architecture and API](docs/A1_ARCHITECTURE.md)
+- [Deployment guide for laboratory IT](docs/A1_DEPLOYMENT.md)
+- [Validation record and limitations](docs/A1_VALIDATION.md)
+- [A0 feasibility report, preserved](docs/A0_FEASIBILITY_REPORT.md)
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-dev.lock
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m pip check
+```
+
+## A0 implementation and original operating guide
+
+The following A0 documentation describes the preserved supplier investigation.
+Its scope statements apply to A0, not the new A1 web package.
 
 Local proof of concept for reading genuine public procurement information from
 **Özdisan** and **Direnc.net**. This repository implements A0 only: no BoM importer,

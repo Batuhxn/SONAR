@@ -1,0 +1,11 @@
+.git
+.venv
+.env
+.env.*
+output
+.playwright-cli
+__pycache__
+*.egg-info
+live-output
+docs/evidence
+tests

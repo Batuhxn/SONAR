@@ -1,0 +1,26 @@
+services:
+  sonar:
+    build: .
+    init: true
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${SONAR_HOST_PORT:-8000}:8000"
+    environment:
+      SONAR_BIND_HOST: 0.0.0.0
+      SONAR_PORT: 8000
+      # Keep loopback allowed for the container health check as well as the proxy hostname.
+      SONAR_ALLOWED_HOSTS: ${SONAR_ALLOWED_HOSTS:-localhost,127.0.0.1}
+      SONAR_ALLOWED_ORIGINS: ${SONAR_ALLOWED_ORIGINS:-http://localhost:8000,http://127.0.0.1:8000}
+      SONAR_SECURE_COOKIE: ${SONAR_SECURE_COOKIE:-false}
+      SONAR_MAX_UPLOAD_MB: ${SONAR_MAX_UPLOAD_MB:-8}
+      SONAR_SESSION_TTL_SECONDS: ${SONAR_SESSION_TTL_SECONDS:-7200}
+      SONAR_MAX_SESSIONS: ${SONAR_MAX_SESSIONS:-100}
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 100
+    stop_grace_period: 120s

@@ -1,0 +1,4 @@
+Reference	Value	MPN	Qty	DNP	Footprint	Datasheet
+U1	Dual operational amplifier	LM358P	1	0	Package_DIP:DIP-8_W7.62mm	https://example.org/datasheet
+R1 R2	10k	RC0603FR-0710KL	2	false	Resistor_SMD:R_0603_1608Metric	""
+C1	100nF	CC0603KRX7R9BB104	1	DNP	Capacitor_SMD:C_0603_1608Metric	""

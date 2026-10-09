@@ -1,0 +1,5 @@
+Designator,Comment,Manufacturer Part Number,Quantity,DNP,Footprint,Engineering Note
+"U1,U2",Dual operational amplifier,LM358P,2,No,DIP-8,Confirm supplier MPN
+"R1-R3",10k resistor,RC0603FR-0710KL,3,False,0603,1% tolerance
+C1,100nF capacitor,CC0603KRX7R9BB104,1,Yes,0603,Optional filter
+J1,Test connector,,1,No,Header-2,Manual URL required
